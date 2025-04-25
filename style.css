@@ -22,13 +22,14 @@
   .container {
     position: relative;
     width: 400px;
-    height: 555px;
+    height: 100px;
     background-color:rgba(255,255,255,0.1);
     backdrop-filter: blur(30px);
     border: 2px solid rgba(255,255,255,.2);
     padding: 20px;
     color: white;
     border-radius: 16px;
+    transition: height .6s ease;
   }
   .search-box{
     position: relative;
@@ -104,6 +105,13 @@
     font-size: 22px;
     font-weight: 500;
   }
+  .weather-box,  .weather-details, .not-found {
+    visibility: hidden;
+    overflow: hidden;
+  }
+  .weather-box.active,  .weather-details.active, .not-found.active {
+    visibility: visible;
+  }
   .weather-details{
     position: absolute;
     bottom: 40px;
@@ -138,9 +146,87 @@
    display: flex;
     align-items: center;
     width: 50%;
-    /* transform: translateY(-100%); */
+    transform: translateY(-100%);
   }
+  .weather-details .humidity .info-humidity, .weather-details .wind .info-wind{
+transform: translateY(-100%);
+overflow: hidden;
+  }
+  .weather-details.active .humidity , .weather-details.active .wind{
+    transform: translateY(0%);
+    transition:transform 1s ease;
+    transition-delay:1s ease;
+   }
+  .not-found {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 110px;
+  }
+  .not-found img{
+    width: 65%;
+  }
+  .not-found p{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+  }
+  .weather-box .box,  .not-found  .box{
+    transform: translateY((-100%));
+  }
+  .weather-box.active .box,  .not-found.active  .box{
+    transform: translateY(0%);
+    transition:transform 1s ease;
+    transition-delay:.6s ;
+  }
+  .city-hide{
+    display: none;
+  }
+  .weather-box .box .info-weather{
+    transform: translateY((-120%));
+  }
+  .container.active .weather-box .box .info-weather,
+  .container.active .weather-details .humidity .info-humidity, 
+  .container.active .weather-details .wind .info-wind{
+    transform: translateY(0%);
+    transition: transform 1s ease;
+      }
   
-  
-  
-  
+
+      /* <button class="button-63" role="button">Button 63</button> */
+      
+      /* CSS */
+      .clear-btn {
+        align-items: center;
+        background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+        border: 0;
+        border-radius: 8px;
+        box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        display: flex;
+    font-size: 18px;
+        justify-content: center;
+        line-height: 1em;
+        max-width: 100%;
+        min-width: 140px;
+        padding: 12px 20px;
+        text-decoration: none;
+       margin: auto;
+        white-space: nowrap;
+        cursor: pointer;
+      }
+      
+      .clear-btn:active,
+      .clear-btn:hover {
+        outline: 0;
+      }
+      
+      @media (min-width: 768px) {
+        .clear-btn {
+          font-size: 24px;
+          min-width: 196px;
+        }
+      }
