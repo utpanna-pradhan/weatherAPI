@@ -1,5 +1,5 @@
 const container = document.querySelector(".container");
-// const body = document.body;
+const body = document.body;
 const search = document.querySelector(".search-box button");
 const input = document.querySelector(".search-box input");
 const clearBtn = document.querySelector(".clear-btn");
@@ -7,6 +7,8 @@ const weatherBox = document.querySelector(".weather-box");
 const weatherDetails = document.querySelector(".weather-details");
 const error404 = document.querySelector(".not-found");
 const cityHide = document.querySelector(".city-hide");
+
+// let backgroundAnimation;
 search.addEventListener("click", () => {
   const APIKey = "b0d3a4d2814ed64c0f708a34dd320605";
   const city = document.querySelector(".search-box input").value;
@@ -53,23 +55,55 @@ search.addEventListener("click", () => {
         switch (json.weather[0].main) {
           case "Clear":
             image.src = "./images/clear.png";
-            // body.style.backgroundImage = "url('./images/clear.png')";
+            // animationLayer.classList.add("rain");
+            
+            body.style.background= "url('https://cdn.wallpapersafari.com/9/74/KdrUsF.jpg')";
+            body.style.backgroundSize="cover";
+            body.style. backgroundPosition="center";
+          
+
 
             break;
           case "Rain":
+           
             image.src = "./images/rain.png";
+                
+            body.style.background= "url('https://wallpapers.com/images/hd/winter-snow-desktop-9r7xt2hg7jllihbh.jpg')";
+            body.style.backgroundSize="cover";
+            body.style. backgroundPosition="center";
+          
             break;
           case "Mist":
             image.src = "./images/mist.png";
+            body.style.background= "url('https://wallpapers.com/images/hd/winter-snow-desktop-9r7xt2hg7jllihbh.jpg')";
+            body.style.backgroundSize="cover";
+            body.style. backgroundPosition="center";
+          
             break;
           case "Snow":
             image.src = "./images/snow.png";
+            body.style.background= "url('https://wallpapers.com/images/hd/winter-snow-desktop-9r7xt2hg7jllihbh.jpg')";
+            body.style.backgroundSize="cover";
+            body.style. backgroundPosition="center";
+           
+
             break;
           case "Cloud":
             image.src = "./images/cloud.png";
+            body.style.background= "url('https://wallpapers.com/images/hd/winter-snow-desktop-9r7xt2hg7jllihbh.jpg')";
+            body.style.backgroundSize="cover";
+            body.style. backgroundPosition="center";
+            
+
             break;
           default:
             image.src = "./images/cloud.png";
+            body.style.background= "url('https://wallpapers.com/images/hd/winter-snow-desktop-9r7xt2hg7jllihbh.jpg')";
+            body.style.backgroundSize="cover";
+            body.style. backgroundPosition="center";
+           
+            
+
         }
         temperature.innerHTML = `${parseInt(
           json.main.temp

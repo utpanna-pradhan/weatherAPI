@@ -230,3 +230,22 @@ overflow: hidden;
           min-width: 196px;
         }
       }
+
+
+
+
+      .bg-animation-one {
+        animation: fadeIn 5s infinite alternate;
+        background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+      }
+
+
+
+
+
+
+
+
+
+
+
