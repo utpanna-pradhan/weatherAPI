@@ -57,7 +57,7 @@ search.addEventListener("click", () => {
             image.src = "./images/clear.png";
             // animationLayer.classList.add("rain");
             
-            body.style.background= "url('https://cdn.wallpapersafari.com/9/74/KdrUsF.jpg')";
+            body.style.background= "url('./images/clearbg.jpg')";
             body.style.backgroundSize="cover";
             body.style. backgroundPosition="center";
           
@@ -68,21 +68,21 @@ search.addEventListener("click", () => {
            
             image.src = "./images/rain.png";
                 
-            body.style.background= "url('https://wallpapers.com/images/hd/winter-snow-desktop-9r7xt2hg7jllihbh.jpg')";
+            body.style.background= "url('./images/rainbg.jpg')";
             body.style.backgroundSize="cover";
             body.style. backgroundPosition="center";
           
             break;
           case "Mist":
             image.src = "./images/mist.png";
-            body.style.background= "url('https://wallpapers.com/images/hd/winter-snow-desktop-9r7xt2hg7jllihbh.jpg')";
+            body.style.background= "url('./images/mistbg.jpg')";;
             body.style.backgroundSize="cover";
             body.style. backgroundPosition="center";
           
             break;
           case "Snow":
             image.src = "./images/snow.png";
-            body.style.background= "url('https://wallpapers.com/images/hd/winter-snow-desktop-9r7xt2hg7jllihbh.jpg')";
+            body.style.background= "url('./images/snowbg1.jpg')";
             body.style.backgroundSize="cover";
             body.style. backgroundPosition="center";
            
@@ -90,7 +90,7 @@ search.addEventListener("click", () => {
             break;
           case "Cloud":
             image.src = "./images/cloud.png";
-            body.style.background= "url('https://wallpapers.com/images/hd/winter-snow-desktop-9r7xt2hg7jllihbh.jpg')";
+            body.style.background= "url('./images/cloudbg.jpg')";
             body.style.backgroundSize="cover";
             body.style. backgroundPosition="center";
             
@@ -98,7 +98,7 @@ search.addEventListener("click", () => {
             break;
           default:
             image.src = "./images/cloud.png";
-            body.style.background= "url('https://wallpapers.com/images/hd/winter-snow-desktop-9r7xt2hg7jllihbh.jpg')";
+            body.style.background= "url('./images/clearbg.jpg')";
             body.style.backgroundSize="cover";
             body.style. backgroundPosition="center";
            
